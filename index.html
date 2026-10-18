@@ -7,7 +7,6 @@
     <title>Personal Portfolio | Akbar Maulana Rizqi</title>
 
     <style>
-        /* Pengaturan dasar halaman */
         * {
             margin: 0;
             padding: 0;
@@ -22,7 +21,6 @@
             line-height: 1.7;
         }
 
-        /* Navigasi */
         header {
             background-color: #10233f;
             color: white;
@@ -60,7 +58,6 @@
             color: #8fc5ff;
         }
 
-        /* Bagian utama */
         .hero {
             background-color: #10233f;
             color: white;
@@ -72,7 +69,7 @@
         }
 
         .hero-text {
-            max-width: 620px;
+            max-width: 650px;
         }
 
         .hero h1 {
@@ -106,7 +103,6 @@
             background-color: #dceaff;
         }
 
-        /* Foto profil */
         .profile-photo {
             width: 220px;
             height: 260px;
@@ -117,7 +113,6 @@
             background-color: #e3eaf4;
         }
 
-        /* Bagian konten */
         section {
             padding: 55px 8%;
         }
@@ -130,12 +125,11 @@
         }
 
         .about-text {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
-            text-align: center;
+            text-align: justify;
         }
 
-        /* Kartu informasi */
         .cards {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -152,7 +146,7 @@
 
         .card h3 {
             color: #10233f;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .card p,
@@ -164,7 +158,6 @@
             padding-left: 20px;
         }
 
-        /* Motto */
         .motto {
             background-color: #e7eef8;
             text-align: center;
@@ -174,32 +167,35 @@
             font-style: italic;
         }
 
-        /* Kontak */
         .contact {
             background-color: #10233f;
             color: white;
             text-align: center;
         }
 
-        .contact h2 {
+        .contact .section-title {
             color: white;
         }
 
         .contact p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .contact a {
-            color: #b9d9ff;
-            margin: 0 8px;
+            display: inline-block;
+            color: #10233f;
+            background-color: white;
+            margin: 5px;
+            padding: 10px 18px;
+            border-radius: 6px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .contact a:hover {
-            text-decoration: underline;
+            background-color: #b9d9ff;
         }
 
-        /* Footer */
         footer {
             background-color: #0b192d;
             color: #dce7f5;
@@ -208,7 +204,6 @@
             font-size: 13px;
         }
 
-        /* Tampilan ponsel */
         @media (max-width: 650px) {
             nav {
                 flex-direction: column;
@@ -247,7 +242,6 @@
 
 <body>
 
-    <!-- Navigasi website -->
     <header>
         <nav>
             <div class="logo">MY PORTFOLIO.</div>
@@ -261,8 +255,8 @@
         </nav>
     </header>
 
-    <!-- Bagian perkenalan -->
     <main>
+
         <section class="hero" id="beranda">
             <div class="hero-text">
                 <p>HALO, PERKENALKAN SAYA</p>
@@ -272,17 +266,16 @@
                 <h2>Mahasiswa Teknik Logistik</h2>
 
                 <p>
-                    Saya adalah mahasiswa yang tertarik pada bidang
-                    logistik, pengelolaan rantai pasok, dan pengembangan
-                    diri melalui pengalaman akademik maupun organisasi.
+                    Saya memiliki ketertarikan pada manajemen persediaan,
+                    pergudangan, material handling, dan pengelolaan
+                    rantai pasok. Saya tertarik mempelajari bagaimana
+                    perencanaan logistik dapat membantu meningkatkan
+                    efisiensi operasional.
                 </p>
 
-                <a class="button" href="#tentang">
-                    Kenali Saya
-                </a>
+                <a class="button" href="#tentang">Kenali Saya</a>
             </div>
 
-            <!-- Ganti foto-profil.jpg dengan foto milik sendiri -->
             <img
                 class="profile-photo"
                 src="foto-profil.jpg"
@@ -290,20 +283,28 @@
             >
         </section>
 
-        <!-- Tentang diri -->
         <section id="tentang">
             <h2 class="section-title">Tentang Saya</h2>
 
             <p class="about-text">
-                Saya merupakan mahasiswa Teknik Logistik yang ingin
-                terus mengembangkan kemampuan akademik, komunikasi,
-                kerja sama tim, dan kepemimpinan. Saya percaya bahwa
-                setiap pengalaman dapat menjadi kesempatan untuk
-                belajar dan berkembang menjadi pribadi yang lebih baik.
+                Saya merupakan mahasiswa Teknik Logistik Universitas
+                Pendidikan Indonesia yang saat ini berada di tahun
+                ketiga perkuliahan. Saya memiliki ketertarikan pada
+                manajemen persediaan, pergudangan, material handling,
+                dan pengelolaan rantai pasok. Saya ingin memahami
+                bagaimana perencanaan serta pengelolaan logistik
+                dapat mendukung efisiensi operasional.
+
+                Di luar kegiatan akademik, saya aktif dalam organisasi
+                mahasiswa, baik di tingkat himpunan maupun fakultas.
+                Saya memandang organisasi sebagai ruang untuk belajar
+                tentang kepemimpinan, komunikasi, kerja sama, dan
+                tanggung jawab. Saya juga terus berupaya mengembangkan
+                kemampuan diri melalui pengalaman akademik dan
+                organisasi.
             </p>
         </section>
 
-        <!-- Informasi profil -->
         <section id="profil">
             <h2 class="section-title">Profil Saya</h2>
 
@@ -311,73 +312,120 @@
 
                 <div class="card">
                     <h3>Pendidikan</h3>
+
                     <p>
-                        Program Studi Teknik Logistik,
-                        Universitas Pendidikan Indonesia.
+                        <strong>Universitas Pendidikan Indonesia</strong><br>
+                        Program Studi Teknik Logistik<br>
+                        Tahun ketiga perkuliahan
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <strong>SMAN 12 Jakarta</strong><br>
+                        Pendidikan menengah atas
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Pengalaman Organisasi</h3>
-                    <p>
-                        Mengembangkan kemampuan komunikasi, koordinasi,
-                        tanggung jawab, dan kerja sama melalui kegiatan
-                        organisasi mahasiswa.
-                    </p>
+
+                    <ul>
+                        <li>
+                            Pernah menjabat sebagai staf BEM pada bidang
+                            Pengembangan Sumber Daya Organisasi (PSDO).
+                        </li>
+
+                        <li>
+                            Mendapat pengalaman dalam Divisi Acara
+                            pada kegiatan organisasi.
+                        </li>
+
+                        <li>
+                            Pernah menjadi Ketua Pelaksana kegiatan
+                            Pelantikan Anggota Mahajana di HMTL.
+                        </li>
+
+                        <li>
+                            Saat ini menjabat sebagai Ketua Komisi 1
+                            PSDO di HMTL FPTI UPI.
+                        </li>
+
+                        <li>
+                            Saat ini aktif sebagai Staf Kesejahteraan
+                            di tingkat fakultas.
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="card">
                     <h3>Minat dan Keterampilan</h3>
+
                     <ul>
-                        <li>Manajemen logistik dan rantai pasok</li>
-                        <li>Kerja sama tim</li>
-                        <li>Komunikasi dan kepemimpinan</li>
-                        <li>Pengembangan kemampuan digital</li>
+                        <li>Manajemen persediaan dan inventory optimization.</li>
+                        <li>Pergudangan dan material handling.</li>
+                        <li>Supply chain dan manajemen logistik.</li>
+                        <li>Perencanaan dan pemodelan transportasi.</li>
+                        <li>Analisis masalah dan koordinasi tim.</li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <h3>Hobi</h3>
-                    <p>
-                        Mendengarkan musik, mengeksplorasi hal baru,
-                        dan mengikuti kegiatan yang dapat menambah
-                        pengalaman serta wawasan.
-                    </p>
+
+                    <ul>
+                        <li>Mendengarkan musik.</li>
+                        <li>Menonton film dan serial.</li>
+                        <li>Berolahraga.</li>
+                        <li>Bermain futsal dan sepak bola.</li>
+                    </ul>
                 </div>
 
             </div>
         </section>
 
-        <!-- Prinsip hidup -->
         <section>
             <h2 class="section-title">Prinsip Hidup</h2>
 
             <div class="motto">
-                "Terus belajar, terus berkembang, dan jadikan
-                setiap pengalaman sebagai pelajaran."
+                "Terus belajar, berani mengambil tanggung jawab,
+                dan jadikan setiap pengalaman sebagai kesempatan
+                untuk berkembang."
             </div>
         </section>
 
-        <!-- Kontak dan tautan -->
         <section class="contact" id="kontak">
             <h2 class="section-title">Mari Terhubung!</h2>
 
             <p>
                 Terima kasih telah mengunjungi halaman perkenalan saya.
+                Silakan terhubung melalui media sosial dan GitHub saya.
             </p>
 
-            <!-- Ganti URL berikut dengan tautan akun milik sendiri -->
-            <a href="https://github.com/" target="_blank"
-               rel="noopener noreferrer">GitHub</a>
+            <a
+                href="https://www.instagram.com/akbarr.mlna/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram @akbarr.mlna
+            </a>
 
-            <a href="https://www.instagram.com/" target="_blank"
-               rel="noopener noreferrer">Instagram</a>
+            <a
+                href="https://github.com/akbarmaulana07"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
         </section>
+
     </main>
 
-    <!-- Bagian penutup -->
     <footer>
-        <p>&copy; 2026 Akbar Maulana Rizqi | Personal Portfolio</p>
+        <p>
+            &copy; 2026 Akbar Maulana Rizqi |
+            Personal Portfolio
+        </p>
     </footer>
 
 </body>
