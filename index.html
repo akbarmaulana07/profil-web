@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Akbar Maulana Rizqi</title>
+
+    <style>
+        /* Pengaturan dasar halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #243247;
+            line-height: 1.7;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #10233f;
+            color: white;
+            padding: 18px 8%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #8fc5ff;
+        }
+
+        /* Bagian utama */
+        .hero {
+            background-color: #10233f;
+            color: white;
+            padding: 65px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+        .hero-text {
+            max-width: 620px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin: 12px 0;
+        }
+
+        .hero h2 {
+            font-size: 20px;
+            color: #b9d9ff;
+            font-weight: normal;
+        }
+
+        .hero p {
+            margin: 18px 0 25px;
+            color: #dce7f5;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: #10233f;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #dceaff;
+        }
+
+        /* Foto profil */
+        .profile-photo {
+            width: 220px;
+            height: 260px;
+            object-fit: cover;
+            object-position: center;
+            border: 4px solid white;
+            border-radius: 16px;
+            background-color: #e3eaf4;
+        }
+
+        /* Bagian konten */
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            color: #10233f;
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Kartu informasi */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #dce4ef;
+            box-shadow: 0 4px 12px rgba(16, 35, 63, 0.05);
+        }
+
+        .card h3 {
+            color: #10233f;
+            margin-bottom: 10px;
+        }
+
+        .card p,
+        .card li {
+            color: #536176;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        /* Motto */
+        .motto {
+            background-color: #e7eef8;
+            text-align: center;
+            border-left: 5px solid #244a78;
+            padding: 25px;
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        /* Kontak */
+        .contact {
+            background-color: #10233f;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 15px;
+        }
+
+        .contact a {
+            color: #b9d9ff;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b192d;
+            color: #dce7f5;
+            text-align: center;
+            padding: 16px;
+            font-size: 13px;
+        }
+
+        /* Tampilan ponsel */
+        @media (max-width: 650px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 45px 6%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .profile-photo {
+                width: 180px;
+                height: 210px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigasi website -->
+    <header>
+        <nav>
+            <div class="logo">MY PORTFOLIO.</div>
+
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian perkenalan -->
+    <main>
+        <section class="hero" id="beranda">
+            <div class="hero-text">
+                <p>HALO, PERKENALKAN SAYA</p>
+
+                <h1>Akbar Maulana Rizqi</h1>
+
+                <h2>Mahasiswa Teknik Logistik</h2>
+
+                <p>
+                    Saya adalah mahasiswa yang tertarik pada bidang
+                    logistik, pengelolaan rantai pasok, dan pengembangan
+                    diri melalui pengalaman akademik maupun organisasi.
+                </p>
+
+                <a class="button" href="#tentang">
+                    Kenali Saya
+                </a>
+            </div>
+
+            <!-- Ganti foto-profil.jpg dengan foto milik sendiri -->
+            <img
+                class="profile-photo"
+                src="foto-profil.jpg"
+                alt="Foto profil Akbar Maulana Rizqi"
+            >
+        </section>
+
+        <!-- Tentang diri -->
+        <section id="tentang">
+            <h2 class="section-title">Tentang Saya</h2>
+
+            <p class="about-text">
+                Saya merupakan mahasiswa Teknik Logistik yang ingin
+                terus mengembangkan kemampuan akademik, komunikasi,
+                kerja sama tim, dan kepemimpinan. Saya percaya bahwa
+                setiap pengalaman dapat menjadi kesempatan untuk
+                belajar dan berkembang menjadi pribadi yang lebih baik.
+            </p>
+        </section>
+
+        <!-- Informasi profil -->
+        <section id="profil">
+            <h2 class="section-title">Profil Saya</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Pendidikan</h3>
+                    <p>
+                        Program Studi Teknik Logistik,
+                        Universitas Pendidikan Indonesia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Pengalaman Organisasi</h3>
+                    <p>
+                        Mengembangkan kemampuan komunikasi, koordinasi,
+                        tanggung jawab, dan kerja sama melalui kegiatan
+                        organisasi mahasiswa.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Minat dan Keterampilan</h3>
+                    <ul>
+                        <li>Manajemen logistik dan rantai pasok</li>
+                        <li>Kerja sama tim</li>
+                        <li>Komunikasi dan kepemimpinan</li>
+                        <li>Pengembangan kemampuan digital</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Hobi</h3>
+                    <p>
+                        Mendengarkan musik, mengeksplorasi hal baru,
+                        dan mengikuti kegiatan yang dapat menambah
+                        pengalaman serta wawasan.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Prinsip hidup -->
+        <section>
+            <h2 class="section-title">Prinsip Hidup</h2>
+
+            <div class="motto">
+                "Terus belajar, terus berkembang, dan jadikan
+                setiap pengalaman sebagai pelajaran."
+            </div>
+        </section>
+
+        <!-- Kontak dan tautan -->
+        <section class="contact" id="kontak">
+            <h2 class="section-title">Mari Terhubung!</h2>
+
+            <p>
+                Terima kasih telah mengunjungi halaman perkenalan saya.
+            </p>
+
+            <!-- Ganti URL berikut dengan tautan akun milik sendiri -->
+            <a href="https://github.com/" target="_blank"
+               rel="noopener noreferrer">GitHub</a>
+
+            <a href="https://www.instagram.com/" target="_blank"
+               rel="noopener noreferrer">Instagram</a>
+        </section>
+    </main>
+
+    <!-- Bagian penutup -->
+    <footer>
+        <p>&copy; 2026 Akbar Maulana Rizqi | Personal Portfolio</p>
+    </footer>
+
+</body>
+</html>
